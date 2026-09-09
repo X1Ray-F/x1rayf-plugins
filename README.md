@@ -9,6 +9,9 @@ universal, zero-config, no secrets.
 - **dependency-change-guard** — checks pinned dependency versions against the public
   registry (npm / PyPI / crates.io) before an install or manifest edit; flags
   hallucinated pins, yanked/deprecated releases and silent downgrades. Fails open.
+- **context-thrift-guard** — advisory nudges that cut token/credit waste: flags a
+  whole-file read of a large file and unbounded cat/grep blob dumps, steering ranged
+  reads / scoped searches. Non-blocking, fail-open.
 
 ## Install
 
@@ -16,6 +19,7 @@ universal, zero-config, no secrets.
 /plugin marketplace add X1Ray-F/x1rayf-plugins
 /plugin install proof-gate@x1rayf-plugins
 /plugin install dependency-change-guard@x1rayf-plugins
+/plugin install context-thrift-guard@x1rayf-plugins
 ```
 
 Or try one locally without installing:

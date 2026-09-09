@@ -1,8 +1,10 @@
 {
   "name": "x1rayf-plugins",
-  "owner": { "name": "X1Ray-F" },
+  "owner": {
+    "name": "X1Ray-F"
+  },
   "metadata": {
-    "description": "Deterministic guardrails that make Claude Code agents more trustworthy — for everyone."
+    "description": "Deterministic guardrails that make Claude Code agents more trustworthy \u2014 for everyone."
   },
   "plugins": [
     {
@@ -13,7 +15,12 @@
     {
       "name": "dependency-change-guard",
       "source": "./dependency-change-guard",
-      "description": "Checks pinned dependency versions against npm/PyPI/crates before an install or manifest edit — flags hallucinated pins, yanked/deprecated releases and silent downgrades. Fails open."
+      "description": "Checks pinned dependency versions against npm/PyPI/crates before an install or manifest edit \u2014 flags hallucinated pins, yanked/deprecated releases and silent downgrades. Fails open."
+    },
+    {
+      "name": "context-thrift-guard",
+      "source": "./context-thrift-guard",
+      "description": "Advisory nudges that cut token/credit waste: flags a whole-file read of a large file and unbounded cat/grep blob dumps, steering ranged reads / scoped searches. Non-blocking, fail-open."
     }
   ]
 }
