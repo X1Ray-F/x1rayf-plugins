@@ -11,8 +11,8 @@ background runs.
 Two low-false-positive signals:
 - A **whole-file Read of a large file** (> ~1500 lines or > 120 KB) → suggests a
   ranged read (`offset`/`limit`) or a scoped grep.
-- An **unbounded `cat`/`less`/`more` of a big file, or an unscoped recursive
-  `grep -r`** → suggests scoping / piping to `head`. Piped or redirected commands,
+- An **unbounded `cat`/`nl`/`tac`/`less`/`more` (incl. flags & multiple files), a
+  `jq .` whole-document pretty-print of a big JSON, or an unscoped recursive `grep -r`** → suggests scoping / piping to `head`. Piped or redirected commands,
   scoped-path greps, and `-l`/`-c`/`--include` greps are left alone.
 
 Fail-open, standard-library Python only, **~0 context tokens** on the common path.
@@ -36,7 +36,7 @@ Thresholds are env-tunable — raise them if you routinely read large generated 
 
 ```bash
 claude --plugin-dir /path/to/context-thrift-guard
-python3 tests/selftest.py     # -> RESULT: 20 passed, 0 failed
+python3 tests/selftest.py     # -> RESULT: 35 passed, 0 failed
 ```
 Requires Node + Python (`python3`/`python`/`py`; the launcher resolves whichever exists).
 

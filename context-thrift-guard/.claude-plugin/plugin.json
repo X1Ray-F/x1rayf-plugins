@@ -1,7 +1,7 @@
 {
   "name": "context-thrift-guard",
-  "description": "Advisory nudges that cut token/credit waste before it bloats context: flags a whole-file read of a large file and an unbounded cat/grep blob dump, steering ranged reads / scoped searches. Non-blocking (additionalContext), fail-open, zero-config, ~0 context cost.",
-  "version": "0.2.0",
+  "description": "Advisory nudges that cut token/credit waste before it bloats context: flags a whole-file read of a large text file (binaries skipped) and unbounded cat/jq/grep blob dumps, steering ranged reads / scoped searches. Non-blocking (additionalContext), fail-open, zero-config, ~0 context cost.",
+  "version": "0.3.0",
   "author": {
     "name": "X1Ray-F"
   },
