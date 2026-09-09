@@ -5,6 +5,7 @@
   "author": {
     "name": "X1Ray-F"
   },
-  "homepage": "https://github.com/X1Ray-F/dependency-change-guard",
-  "license": "MIT"
+  "homepage": "https://github.com/X1Ray-F/x1rayf-plugins/tree/main/dependency-change-guard",
+  "license": "MIT",
+  "repository": "https://github.com/X1Ray-F/x1rayf-plugins"
 }
