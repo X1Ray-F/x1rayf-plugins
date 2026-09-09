@@ -1,0 +1,10 @@
+{
+  "name": "dependency-change-guard",
+  "description": "Catches bad dependency changes before they land: on an install command or a manifest edit it checks the pinned version against the public registry (npm / PyPI / crates.io) \u2014 flags versions that don't exist (hallucinated pins), yanked/deprecated releases, and silent downgrades \u2014 and surfaces deprecation warnings from build/test output. Deterministic, fails open, no secrets.",
+  "version": "0.3.0",
+  "author": {
+    "name": "X1Ray-F"
+  },
+  "homepage": "https://github.com/X1Ray-F/dependency-change-guard",
+  "license": "MIT"
+}

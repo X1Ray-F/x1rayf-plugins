@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/run.js\" \"${CLAUDE_PLUGIN_ROOT}/hooks/depguard.py\"" }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/run.js\" \"${CLAUDE_PLUGIN_ROOT}/hooks/deprecation_scan.py\"" }
+        ]
+      }
+    ]
+  }
+}

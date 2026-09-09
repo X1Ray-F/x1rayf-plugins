@@ -1,0 +1,10 @@
+{
+  "name": "proof-gate",
+  "description": "Makes 'done / tests pass / fixed' mean something: a Stop-hook gate that blocks a completion claim unless a test or build actually passed AFTER your latest code edit, and flags tests weakened (skip/only/removed assertions) to fake a green. Deterministic, language-agnostic, zero-config.",
+  "version": "0.3.0",
+  "author": {
+    "name": "X1Ray-F"
+  },
+  "homepage": "https://github.com/X1Ray-F/proof-gate",
+  "license": "MIT"
+}

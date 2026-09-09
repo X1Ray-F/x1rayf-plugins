@@ -1,0 +1,19 @@
+{
+  "name": "x1rayf-plugins",
+  "owner": { "name": "X1Ray-F" },
+  "metadata": {
+    "description": "Deterministic guardrails that make Claude Code agents more trustworthy — for everyone."
+  },
+  "plugins": [
+    {
+      "name": "proof-gate",
+      "source": "./proof-gate",
+      "description": "Blocks a 'done / tests pass / fixed' claim unless a test or build actually passed after your latest code edit, and flags tests weakened to fake a green."
+    },
+    {
+      "name": "dependency-change-guard",
+      "source": "./dependency-change-guard",
+      "description": "Checks pinned dependency versions against npm/PyPI/crates before an install or manifest edit — flags hallucinated pins, yanked/deprecated releases and silent downgrades. Fails open."
+    }
+  ]
+}

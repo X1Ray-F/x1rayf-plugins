@@ -1,0 +1,19 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/run.js\" \"${CLAUDE_PLUGIN_ROOT}/hooks/ledger.py\"" }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/run.js\" \"${CLAUDE_PLUGIN_ROOT}/hooks/proof_gate.py\"" }
+        ]
+      }
+    ]
+  }
+}
